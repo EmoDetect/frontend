@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+html {
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Poppins';
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+.container {
+    margin-top: 20rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    background-color: #89c2d9;
+    opacity: 0.65;
+    border-radius: 3rem;
+}
+
+.slider-img img {
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+}
+
+.motto {
+    font-family: 'Poppins';
+    font-size: 5rem;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-right: 2rem;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+
+.btn:hover {
+    background-color: #d3d3d3;
+}
+
+
+.active {
+    position: relative;
+    z-index: 1001;
+    display: block;
+    animation: 1.9s ease-in-out 0.2s normal both 1 running bounceInUp;
+}
+
+@keyframes bounceInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 500px, 0);
+        transform: translate3d(0, 500px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

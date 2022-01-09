@@ -1,0 +1,31 @@
+{
+  "name": "emodetect-55dd1",
+  "version": "1.0.0",
+  "description": "Firebase/Parcel starter project example",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "parcel ./src/*.html ./src/pages/**/*.html",
+    "build": "parcel build ./src/*.html ./src/pages/auth/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "parcel": "^2.0.0-beta.1",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "firebase": "^8.2.10",
+    "firebaseui": "^4.7.3"
+  },
+  "alias": {
+    "database": "/src/scripts/providers/data-provider.js",
+    "auth": "/src/scripts/providers/auth.js",
+    "initApp": "/src/scripts/providers/initApp.js"
+  }
+}

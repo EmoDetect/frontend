@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.PNG" /> -->
+    <title>Activities List</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="activities-style.css" />
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <style>
+        body {
+            position: absolute;
+        }
+
+        footer {
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav">
+                <a class="logo">
+                    <img src="/src/img/logo.png" alt="logo" onClick="window.location.reload()" />
+                </a>
+                <h1 class="title">Choose your favorite game</h1>
+                <a href="/src/pages/login/login.html" id="nav-logout-games">Logout</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="activities-container">
+            <article class="activity special-game">
+                <a href="/src/pages/homepage-kids/homepage-kids.html">
+                    <p>Math Game</p>
+                    <img src="/src/img/a1-math.png" width="150px" height="150px" />
+                </a>
+            </article>
+            <article class="activity">
+                <p>Alphabet Go Fish Cards</p>
+                <img src="/src/img/a2-abc.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Candy Land</p>
+                <img src="/src/img/a3-candyland.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Chutes and Ladders</p>
+                <img src="/src/img/a4-chutes.png" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Sum Swamp</p>
+                <img src="/src/img/a5-sum-swamp.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Sorry</p>
+                <img src="/src/img/a6-sorry.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Connect 4</p>
+                <img src="/src/img/a7-connect.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Spot it!</p>
+                <img src="/src/img/a8-spot.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Uno</p>
+                <img src="/src/img/a9-uno.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Kanoodle</p>
+                <img src="/src/img/a10-kan.png" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Guess the pet</p>
+                <img src="/src/img/a11-pet.jpg" width="150px" height="150px" />
+            </article>
+            <article class="activity">
+                <p>Jumpy</p>
+                <img src="/src/img/a12-jumpy.png" width="150px" height="150px" />
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p class="site-name">Smarty Games</p>
+            <ul class="flex-row">
+            </ul>
+            <p>&copy; All rights reserved</p>
+        </div>
+    </footer>
+    <script type="module" src="./activities.js"></script>
+
+</body>
+
+</html>

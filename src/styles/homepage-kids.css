@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+main {
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+}
+
+.math-game {
+    font-size: 20px;
+    margin-left: 150px;
+    font-weight: bold;
+}
+.game-container {
+    margin-top: 2rem;
+    font-family: var(--game-font);
+    background-color: #457b9d;
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    width: 80rem;
+    /* grid-template-columns: 72% 8%;
+  flex-grow: 1; */
+}
+.equation {
+    background-color: #e5e5e5;
+    font-size: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px;
+    width: 70rem;
+}
+.equation .number {
+    color: var(--number-color);
+}
+.equation .sign {
+    color: var(--sign-color);
+}
+.answer-options {
+    box-sizing: border-box;
+    font-size: 6rem;
+    display: flex;
+    color: orangered;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px;
+}
+.answer-options p {
+    cursor: pointer;
+    text-align: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #48bfe3;
+    transition: 1s;
+    flex-grow: 1;
+    line-height: 150px;
+}
+.answer-options p:first-child {
+    margin-top: 0px;
+}
+.answer-options p:hover {
+    background-color: #fcbf49;
+}
+
+.slider-img {
+    display: none;
+    position: absolute;
+    right: 1px;
+    bottom: -25px;
+    width: 350px;
+    height: 579px;
+    content: '';
+}
+
+.kid {
+    position: relative;
+    display: block;
+    z-index: 1001;
+    display: none;
+}
+
+.active {
+    position: relative;
+    z-index: 1001;
+    display: block;
+    animation: 1.9s ease-in-out 0.2s normal both 1 running bounceInUp;
+}
+
+@keyframes bounceInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 500px, 0);
+        transform: translate3d(0, 500px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

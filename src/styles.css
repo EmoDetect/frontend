@@ -1,0 +1,16 @@
+@import "./styles/buttons";
+
+nav {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  background-color: lightblue;
+}
+
+.container {
+  padding: 20px 5%;
+}
+
+.pure-menu-link {
+  color: rgba(0, 0, 0, 0.7);
+}

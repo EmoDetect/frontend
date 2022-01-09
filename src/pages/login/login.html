@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="login-style.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.PNG" /> -->
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav">
+                <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
+                    <img src="/src/img/logo.png" alt="logo" onClick="window.location.reload()" />
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="login-div" class="main-div">
+            <h3>Login</h3>
+            <form action="">
+                <input type="email" placeholder="Email..." id="email_field" autocomplete="on" />
+                <input type="password" placeholder="Password..." id="password_field" autocomplete="on" />
+                <button type="submit" id="login-button">
+                    Login to Account
+                </button>
+                <p id="display-or-text"><span>or</span></p>
+                <button id="new-account">
+                    Create New Account
+                </button>
+            </form>
+        </div>
+
+        <!-- register -->
+        <div id="register-div" class="main-div">
+            <h3>Create New Account</h3>
+            <input type="email" placeholder="Email..." id="email_field_register" />
+            <input type="password" placeholder="Password..." id="password_field_register" />
+            <button id="register_button">Register</button>
+        </div>
+
+        <!-- <img src="/src/img/kid2.png" alt="kid-login-photo" id="kid-login-photo" height="" /> -->
+    </main>
+
+    <script type="module" src="login.js"></script>
+</body>
+
+</html>

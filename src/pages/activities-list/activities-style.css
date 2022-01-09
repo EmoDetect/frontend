@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+header {
+    background-color: #008c99;
+}
+main {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.title {
+    color: #ffbe0b;
+}
+
+.activities-container {
+    padding-top: 10px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 4px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 24%;
+    margin-bottom: 20px;
+}
+
+.activity p {
+    font-family: 'Poppins';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.activity img {
+    cursor: pointer;
+}
+
+.special-game a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: black;
+}

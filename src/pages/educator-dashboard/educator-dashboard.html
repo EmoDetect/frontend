@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.PNG" /> -->
+    <title>Educator Dashboard</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/educator-dashboard.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/footer.css" />
+    <link rel="stylesheet" href="/src/styles/loader-style.css" />
+    <link rel="stylesheet" href="/src/styles/overview-section.css">
+    <!-- <script defer src="script.js"></script> -->
+    <style>
+        header {
+            background-color: #008c99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <div class="header-container">
+                <nav class="nav">
+                    <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
+                        <img src="/src/img/logo.png" alt="logo" onClick="window.location.reload()" />
+                    </a>
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="#statistics-section" class="nav-link">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#overview-section" class="nav-link">Overview</a>
+                        </li>
+                    </ul>
+                    <a href="#" id="nav-logout">Logout</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="loader">
+                <div class="circular">
+                    <div class="inner"></div>
+                    <div class="outer"></div>
+                    <div class="numb"></div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="./loader.js"></script>
+            </div>
+
+            <section id="statistics-section" class="statistics-container">
+                <h2 class="statistics-title">Statistics about children</h2>
+            </section>
+            <section id="overview-section" class="overview-section-class">
+                <div class="overview-container">
+                    <h2 class="overview-title">Overview</h2>
+                    <div class="content">
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji1.png" alt="emoji1"></div>
+                            <div class="counter">19</div>
+                            <div class="text">Happy</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji2.png" alt="emoji2"></div>
+                            <div class="counter">5</div>
+                            <div class="text">Angry</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji3.png" alt="emoji3"></div>
+                            <div class="counter">12</div>
+                            <div class="text">Sorrow</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji4.png" alt="emoji4"></div>
+                            <div class="counter">9</div>
+                            <div class="text">Surprise</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blank-section"></section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p class="site-name">Smarty Games</p>
+                <ul class="flex-row">
+                    <li>
+                        <a href="#" class="footer-link">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Overview</a>
+                    </li>
+                </ul>
+                <p>&copy; All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- <script>
+        CSS.registerProperty({
+            name: '--p',
+            syntax: '<integer>',
+            initialValue: 0,
+            inherits: true
+        });
+
+    </script> -->
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

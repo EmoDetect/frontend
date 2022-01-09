@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Game</title>
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.PNG" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/homepage-kids.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <style>
+        main {
+            margin-top: 10vh;
+        }
+
+        header {
+            background-color: #008c99;
+        }
+
+        /* body {
+                position: absolute;
+            } */
+        footer {
+            margin-top: 30px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav">
+                <a href="/src/pages/homepage-kids/homepage-kids.html" class="logo">
+                    <img src="/src/img/logo.png" alt="logo" onClick="window.location.reload()" />
+                </a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="/src/pages/activities-list/activities.html" class="nav-link">Back to games</a>
+                    </li>
+                    <li class="math-game">Math Game</li>
+                </ul>
+                <a href="#" id="nav-logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <!-- GAME IMPLEMENTATION -->
+    <main>
+        <section class="game-container">
+            <div class="equation">
+                <p class="number number1">1</p>
+                <p class="sign">+</p>
+                <p class="number number2">1</p>
+                <p class="sign">=</p>
+                <p class="number result">?</p>
+            </div>
+            <div class="answer-options">
+                <p class="option option1">1</p>
+                <p class="option option2">2</p>
+                <p class="option option3">3</p>
+            </div>
+        </section>
+        <div class="contentarea hide">
+            <div class="camera">
+                <video id="video">Video stream not available.</video>
+            </div>
+            <canvas id="canvas" class="hide"></canvas>
+        </div>
+        <div class="slider-img">
+            <img width="350" height="400" src="/src/img/happy-kid-game.png" alt="slider" id="happyKidImage"
+                class="kid" />
+            <img width="350" height="400" src="/src/img/sad-kid-game.png" alt="slider" id="sadKidImage" class="kid" />
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p class="site-name">Smarty Games</p>
+            <ul class="flex-row">
+            </ul>
+            <p>&copy; All rights reserved</p>
+        </div>
+    </footer>
+
+    <audio id="try_again_audio">
+        <source src="/src/pages/homepage-kids/try_again.mp3" />
+    </audio>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

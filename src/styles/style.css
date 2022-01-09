@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+:root {
+    --number-color: #ffc300;
+    --sign-color: indigo;
+    --game-font: 'Fredoka One';
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    background-color: #fffdf7;
+    font-size: 1.4rem;
+    height: 100%;
+}
+
+/* LOGIN & REGISTRATION CHILDREN */
+.webcam-container {
+    height: 65vh;
+    background-color: #fffdf7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.webcam {
+    background-color: rgb(185, 177, 177);
+    margin-bottom: 4rem;
+    width: 40rem;
+    height: 30rem;
+}
+.registration-button {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fdc921;
+    padding: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* LOGIN EDUCATORS */
+.login-container {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #99d6ea;
+}
+.login-container label {
+    display: block;
+}
+
+/* HOMEPAGE GAME */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* style for take canvas to take a photo */
+#video {
+    border: 1px solid black;
+    width: 320px;
+    height: 240px;
+}
+.camera {
+    width: 340px;
+    display: inline-block;
+}
+.contentarea {
+    font-size: 16px;
+    font-family: "Poppins";
+    text-align: center;
+}
+/*Dashboard educator*/
+.overview-container {
+    background-color: #008c99;
+    width: 100%;
+    height: 30vh;
+}
+
+.hide {
+    display: none;
+}
