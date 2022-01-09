@@ -44,10 +44,13 @@ emotionsNames = {
 };
 
 emotionsMap = {
-    1: ['joy-range', 'joyLikelihood'],
-    2: ['sorrow-range', 'sorrowLikelihood'],
+    1: ['happy-range', 'happyLikelihood'],
+    2: ['sad-range', 'sadLikelihood'],
     3: ['surprise-range', 'surpriseLikelihood'],
-    4: ['anger-range', 'angerLikelihood']
+    4: ['angry-range', 'angryLikelihood'],
+    5: ['disgust-range', 'disgustLikelihood'],
+    6: ['fear-range', 'fearLikelihood'],
+    7: ['neutral-range', 'neutralLikelihood']
 };
 
 const articleContainer = document.querySelector('.statistics-container');
@@ -67,25 +70,25 @@ const getKids = async () => {
                 <div id="data">
 
                     <div class="emotion-row">
-                        <span class="emotion-label">Joy</span>
-                        <div id="joy${i}" class="emotion-range">
-                            <div id="joy-range1${i}" class="squares"></div>
-                            <div id="joy-range2${i}" class="squares"></div>
-                            <div id="joy-range3${i}" class="squares"></div>
-                            <div id="joy-range4${i}" class="squares"></div>
-                            <div id="joy-range5${i}" class="squares"></div>
+                        <span class="emotion-label">Happy</span>
+                        <div id="happy${i}" class="emotion-range">
+                            <div id="happy-range1${i}" class="squares"></div>
+                            <div id="happy-range2${i}" class="squares"></div>
+                            <div id="happy-range3${i}" class="squares"></div>
+                            <div id="happy-range4${i}" class="squares"></div>
+                            <div id="happy-range5${i}" class="squares"></div>
                         </div>   
                         <span id="emotion-value1${i}" class="emotion-value">Very...</span>
                     </div>
 
                     <div class="emotion-row">
-                        <span class="emotion-label">Sorrow</span>
-                        <div id="sorrow${i}" class="emotion-range">
-                            <div id="sorrow-range1${i}" class="squares"></div>
-                            <div id="sorrow-range2${i}" class="squares"></div>
-                            <div id="sorrow-range3${i}" class="squares"></div>
-                            <div id="sorrow-range4${i}" class="squares"></div>
-                            <div id="sorrow-range5${i}" class="squares"></div>
+                        <span class="emotion-label">Sad</span>
+                        <div id="sad${i}" class="emotion-range">
+                            <div id="sad-range1${i}" class="squares"></div>
+                            <div id="sad-range2${i}" class="squares"></div>
+                            <div id="sad-range3${i}" class="squares"></div>
+                            <div id="sad-range4${i}" class="squares"></div>
+                            <div id="sad-range5${i}" class="squares"></div>
                         </div>   
                         <span id="emotion-value2${i}" class="emotion-value">Very...</span>
                     </div>
@@ -103,24 +106,53 @@ const getKids = async () => {
                     </div>
 
                     <div class="emotion-row">
-                        <span class="emotion-label">Anger</span>
-                        <div id="anger${i}" class="emotion-range">
-                            <div id="anger-range1${i}" class="squares"></div>
-                            <div id="anger-range2${i}" class="squares"></div>
-                            <div id="anger-range3${i}" class="squares"></div>
-                            <div id="anger-range4${i}" class="squares"></div>
-                            <div id="anger-range5${i}" class="squares"></div>
+                        <span class="emotion-label">Angry</span>
+                        <div id="angry${i}" class="emotion-range">
+                            <div id="angry-range1${i}" class="squares"></div>
+                            <div id="angry-range2${i}" class="squares"></div>
+                            <div id="angry-range3${i}" class="squares"></div>
+                            <div id="angry-range4${i}" class="squares"></div>
+                            <div id="angry-range5${i}" class="squares"></div>
                         </div>   
                         <span id="emotion-value4${i}" class="emotion-value">Very...</span>
                     </div>
 
-                    <div class="conf-container">
-                        <span>Confidence</span>
-                        <div class="progress progress-moved">
-                            <div id="progress-bar${i}" class="progress-bar"></div>
-                            <div id="bar${i}" class="loader${i}" ></div>
-                        </div>
+                    <div class="emotion-row">
+                        <span class="emotion-label">Disgust</span>
+                        <div id="disgust${i}" class="emotion-range">
+                            <div id="disgust-range1${i}" class="squares"></div>
+                            <div id="disgust-range2${i}" class="squares"></div>
+                            <div id="disgust-range3${i}" class="squares"></div>
+                            <div id="disgust-range4${i}" class="squares"></div>
+                            <div id="disgust-range5${i}" class="squares"></div>
+                        </div>   
+                        <span id="emotion-value5${i}" class="emotion-value">Very...</span>
                     </div>
+
+                    <div class="emotion-row">
+                        <span class="emotion-label">Fear</span>
+                        <div id="fear${i}" class="emotion-range">
+                            <div id="fear-range1${i}" class="squares"></div>
+                            <div id="fear-range2${i}" class="squares"></div>
+                            <div id="fear-range3${i}" class="squares"></div>
+                            <div id="fear-range4${i}" class="squares"></div>
+                            <div id="fear-range5${i}" class="squares"></div>
+                        </div>   
+                        <span id="emotion-value6${i}" class="emotion-value">Very...</span>
+                    </div>
+
+                    <div class="emotion-row">
+                        <span class="emotion-label">Neutral</span>
+                        <div id="neutral${i}" class="emotion-range">
+                            <div id="neutral-range1${i}" class="squares"></div>
+                            <div id="neutral-range2${i}" class="squares"></div>
+                            <div id="neutral-range3${i}" class="squares"></div>
+                            <div id="neutral-range4${i}" class="squares"></div>
+                            <div id="neutral-range5${i}" class="squares"></div>
+                        </div>   
+                        <span id="emotion-value7${i}" class="emotion-value">Very...</span>
+                    </div>
+
                 </div>
             </article>`
         );
@@ -184,7 +216,7 @@ getKids().then((res) => {
     res.forEach((element) => {
         childNb = childNb + 1;
 
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 7; i++) {
             let string = emotionsMap[i][1];
 
             range = emotionsRange[element.data().emotions[0][string]];

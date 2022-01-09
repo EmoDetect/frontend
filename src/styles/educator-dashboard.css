@@ -76,7 +76,7 @@
     align-items: center;
     justify-content: center;
     width: 51rem;
-    height: 17rem;
+    height: 20rem;
 }
 
 .statistics-container article img {
@@ -84,7 +84,8 @@
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
     display: block;
     width: 260px;
-    height: 170px;
+    /* height: 170px; */
+    height: 200px;
 }
 
 .show-overview-container {
@@ -130,7 +131,7 @@
 .statistics-container h2:after {
     position: absolute;
     left: 50%;
-    bottom: 576px;
+    /* bottom: 576px; */
     margin-left: -87px;
     width: 174px;
     height: 19px;
